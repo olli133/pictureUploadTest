@@ -1,0 +1,26 @@
+<?php
+/**
+ * Created by PhpStorm.
+ * User: Olive
+ * Date: 13.01.2017
+ * Time: 21:20
+ */
+
+namespace AppBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Class User
+ * @package AppBundle\Entity
+ * @ORM\Entity
+ */
+class User
+{
+    /**
+     * @ORM\Id
+     * @ORM\Column(type="integer")
+     * @ORM\GeneratedValue(strategy="AUTO")
+     */
+    private $id;
+}

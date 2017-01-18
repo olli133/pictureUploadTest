@@ -1,0 +1,20 @@
+{% block body %}
+    {{ form_start(form) }}
+    {{ form_widget(form) }}
+    {{ form_end(form) }}
+
+    <div class="vich-file">
+        {{ form_widget(form.file) }}
+        {% if form.delete is defined %}
+            {{ form_row(form.delete) }}
+        {% endif %}
+
+        {% if download_uri is defined and download_uri %}
+            <a href="{{ download_uri }}">{{ 'download'|trans({}, 'VichUploaderBundle') }}</a>
+        {% endif %}
+    </div>
+{% endblock %}
+
+{% block stylesheets %}
+
+{% endblock %}
